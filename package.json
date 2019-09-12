@@ -1,0 +1,24 @@
+{
+  "name": "touchberry",
+  "version": "1.0.0",
+  "description": "Library for the TouchBerry shield",
+  "main": "./src/touchberry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BioBoost/touchberry.git"
+  },
+  "keywords": [
+    "touchberry",
+    "rpi",
+    "i2c"
+  ],
+  "author": "Nico De Witte",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BioBoost/touchberry/issues"
+  },
+  "homepage": "https://github.com/BioBoost/touchberry#readme"
+}
