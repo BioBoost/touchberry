@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/BioBoost/touchberry/issues"
   },
-  "homepage": "https://github.com/BioBoost/touchberry#readme"
+  "homepage": "https://github.com/BioBoost/touchberry#readme",
+  "dependencies": {
+    "i2c-bus": "^4.0.10"
+  }
 }
