@@ -12,18 +12,14 @@ const revisions = {
 class BoardBuilder {
 
     static build() {
-      console.log("Building you a nice touchberry board.");
       let revision = BoardBuilder.detect_board_revision();
-
-      let shield = undefined;
       if (revision === revisions.v2board) {
-        shield = new TouchBerryV2();
+        let shield = new TouchBerryV2();
+        shield.boardRevision = revision;
+        return shield;
       } else {
-        shield = new TouchBerry();
+        throw 'Failed to detect shield revision'
       }
-
-      shield.boardRevision = revision;
-      return shield;
     }
   
     //////////////////////
