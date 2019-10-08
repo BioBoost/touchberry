@@ -13,13 +13,16 @@ class BoardBuilder {
 
     static build() {
       let revision = BoardBuilder.detect_board_revision();
-      if (revision === revisions.v2board) {
-        let shield = new TouchBerryV2();
-        shield.boardRevision = revision;
-        return shield;
-      } else {
-        throw 'Failed to detect shield revision'
+      
+      let shield = null;
+      switch(revision) {
+        case revisions.v2board: shield = new TouchBerryV2(); break;
+        case revisions.v3board: shield = new TouchBerryV3(); break;
+        default: throw 'Failed to detect shield revision';
       }
+
+      shield.boardRevision = revision;
+      return shield;
     }
   
     //////////////////////
@@ -38,6 +41,8 @@ class BoardBuilder {
       let devices = this.scan_devices();
       if (devices.includes(0x48)) {     //MCP9800 temp sensor
         return revisions.v2board;
+      } else if (devices.includes(0x50)) {    // 24AA64 EEPROM
+        return revisions.v3board;
       } else {
         return revisions.unknown;
       }
