@@ -24,6 +24,7 @@
   "dependencies": {
     "i2c-bus": "^4.0.10",
     "mcp9800": "^1.0.0",
-    "touchkey": "^1.0.0"
+    "touchkey": "^1.0.0",
+    "rgbledbar": "^1.0.0"
   }
 }

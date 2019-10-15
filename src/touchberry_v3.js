@@ -1,9 +1,11 @@
-const TouchBerry = require('./touchberry');
+const TouchBerry = require('./touchberry_base');
 
 class TouchBerryV3 extends TouchBerry {
 
+  static REVISION = 'touchberry_v3';
+
   constructor() {
-    super();
+    super(TouchBerryV3.REVISION);
   }
 
 }

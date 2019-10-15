@@ -1,10 +1,12 @@
-const TouchBerry = require('./touchberry');
+const TouchBerry = require('./touchberry_base');
 const Mcp9800 = require('mcp9800');
 
 class TouchBerryV2 extends TouchBerry {
 
+  static REVISION = 'touchberry_v2';
+
   constructor() {
-    super();
+    super(TouchBerryV2.REVISION);
     this.tempSensor = new Mcp9800(this.i2c);
     this.tempSensor.resolution(3);
   }
