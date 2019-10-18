@@ -1,6 +1,8 @@
 # TouchBerry Shield Library
 
-NodeJS library for the TouchBerry shield. Currently only tested on the Raspberry Pi 3 using a v2 shield.
+NodeJS library for the TouchBerry shield. Currently only tested on the Raspberry Pi 3.
+
+Currently only supports the touch and led bar for all revisions of the shield (v1, v2 and v3).
 
 ## Usage
 
